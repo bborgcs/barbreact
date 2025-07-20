@@ -85,30 +85,86 @@ export const campeonato = [
     },
 ]
 
-export const police = [
-    {
-        id: 1,
-        name: 'Mariana Alves Barboza',
-        regional: 'Curitiba',
+export const jogadores = [
+    { 
+        id: 1, 
+        nome: 'FILIPE', 
+        posicao: 'GOLEIRO',
+        numero: 1, 
+        gols: 0,
+        jogos: 11
     },
-    {
-        id: 2,
-        name: 'Pedro Henrique Limeira',
-        regional: 'Paranaguá',
+    { 
+        id: 2, 
+        nome: 'RADECHE', 
+        posicao: 'LATERAL',
+        numero: 2, 
+        gols: 0,
+        jogos: 9
     },
-    {
-        id: 3,
-        name: 'Eduardo Souza Rodrigue',
-        regional: 'Curitiba',
+    { 
+        id: 3, 
+        nome: 'G. VIDAL', 
+        posicao: 'ZAGUEIRO',
+        numero: 3, 
+        gols: 1,
+        jogos: 9
     },
-    {
-        id: 4,
-        name: 'Carolina Santos Andrade',
-        regional: 'Curitiba',
+    { 
+        id: 4, 
+        nome: 'NETO', 
+        posicao: 'ZAGUEIRO',
+        numero: 4, 
+        gols: 2,
+        jogos: 5
     },
-    {
-        id: 5,
-        name: 'Carlos Antônico Castro',
-        regional: 'Curitiba',
+    { 
+        id: 5, 
+        nome: 'BIRO', 
+        posicao: 'LATERAL',
+        numero: 6, 
+        gols: 0,
+        jogos: 10
     },
+    { 
+        id: 6, 
+        nome: 'FERREIRA', 
+        posicao: 'MEIA',
+        numero: 5, 
+        gols: 2,
+        jogos: 3
+    },
+    { 
+        id: 7, 
+        nome: 'ELVIS', 
+        posicao: 'MEIA',
+        numero: 8, 
+        gols: 3,
+        jogos: 6
+    },
+    { 
+        id: 8, 
+        nome: 'BRYAM', 
+        posicao: 'PONTA DIREITA',
+        numero: 11, 
+        gols: 3,
+        jogos: 8
+    },
+    { 
+        id: 9, 
+        nome: 'NICO', 
+        posicao: 'SEGUNDO ATACANTE',
+        numero: 15, 
+        gols: 2,
+        jogos: 7
+    },
+    { 
+        id: 10, 
+        nome: 'VALDÍVIA', 
+        posicao: 'ATACANTE',
+        numero: 10, 
+        gols: 4,
+        jogos: 11
+    },
+        
 ]
