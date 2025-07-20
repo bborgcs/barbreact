@@ -3,11 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
     box-sizing: border-box;
     height: 100vh;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 70px;
     padding-bottom: 50px;
     font-family: 'Bebas Neue', sans-serif;
-    
 `;
 
 export const BoxIcon = styled.div`
@@ -40,11 +38,10 @@ export const Title = styled.h1`
 
 export const InputEmail = styled.input.attrs({ type: 'email' })`
     display: inline-block;
-    width: 90%;
+    width: 50%;
     height: 30px;
     border: 0px;
-    border-left: 1px solid #888;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #970700;
     border-radius: 3px;
     margin-bottom: 10px;
     padding-left: 10px;
@@ -54,15 +51,15 @@ export const InputEmail = styled.input.attrs({ type: 'email' })`
         border: 1px solid #970700;
         border-radius: 4px;
     } 
+
 `
 
 export const InputPassword = styled.input.attrs({ type: 'password' })`
     display: inline-block;
-    width: 90%;
+    width: 50%;
     height: 30px;
     border: 0px;
-    border-left: 1px solid #888;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #970700;
     border-radius: 3px;
     margin-bottom: 10px;
     padding-left: 10px;

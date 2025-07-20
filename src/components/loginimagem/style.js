@@ -13,6 +13,6 @@ export const Container = styled.div`
 `
 
 export const Icon = styled.img`
-    width: 420px;
-    height: 420px;
+    width: 315px;
+    height: 315px;
 `;

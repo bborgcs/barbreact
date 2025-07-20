@@ -25,13 +25,14 @@ export default function LoginUsuario() {
     function Authenticate() {
 
         const user = {
-            name: 'Gil Eduardo',
+            name: 'Barbara Borges',
             email: email 
         }
         navigate('/home', { state: { user: user }})
     }
 
     return (
+        
         <Container>
             <BoxIcon>
                 <BoxItem>
@@ -60,8 +61,8 @@ export default function LoginUsuario() {
                 <Submit value="ENTRAR" onClick={() => Authenticate() }/>
 
                 <SendBox>
-                    <Submit value="ENTRAR COMO ADMINISTRADOR" onClick={() => Authenticate() }/>
-                    <Submit value="CADASTRE-SE" onClick={() => Authenticate() }/>
+                    <Submit value="ENTRAR COMO ADMINISTRADOR" onClick={() => navigate('/login_adm')}/>
+                    <Submit value="CADASTRE-SE" onClick={() => navigate('/cadastro')}/>
                 </SendBox>
             </DataBox>
             
