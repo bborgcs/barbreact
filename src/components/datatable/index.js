@@ -6,7 +6,7 @@ import {  Title,
 export default function DataTable(props) {
   return (
     <>
-      <table style={{ width: '100%' }}>
+      <table>
         <td>
           <Title>{props.title}</Title>
         </td>

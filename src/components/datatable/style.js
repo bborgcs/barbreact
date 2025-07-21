@@ -16,3 +16,4 @@ export const Acao = styled.button`
         background-color: #750500;
     }
 `
+
