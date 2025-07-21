@@ -1,12 +1,10 @@
 import { Container } from 'react-bootstrap';
 import NavigationBar from '../../components/navigationbar';
 import { jogadores } from '../../utils/datatest';
+import { comissao } from '../../utils/datatest';
 import Card from '../../components/card';
+import CardTecnicoItem from '../../components/cardtecnico';
 import DadosJogadores from '../../components/dadosjogadores';
-import {CardDados,
-            Title,
-            Item,
-} from '../../components/dadosjogadores/style';
 import { SubContainer,
             Div1,
             Div2,
@@ -32,18 +30,17 @@ export default function Elenco() {
                     <Div2>
                         <DadosJogadores
                             title="MAIS UTILIZADOS"
+                            texto="JOGOS"
                             atributo="jogos"
                             jogadores={jogadores}
                         />
                     </Div2>
                     <Div3>
-                        <CardDados className='d-flex flex-column align-items-center'>
-                            <div className="icon" style={{ textAlign: 'center'}}>
-                                <i className="bi bi-person-fill" style={{ fontSize: '90px' }}></i>
-                            </div>
-                            <Title>FAHEL JR</Title>
-                            <Item style={{textAlign: 'center'}}>TÉCNICO</Item>
-                        </CardDados>
+                    
+                            {comissao.map((tecnico, index) => (
+                                <CardTecnicoItem key={index} tecnico={tecnico} />
+                            ))}
+                
                     </Div3>
                 </SubContainer>
             </Container>

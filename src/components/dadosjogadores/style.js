@@ -8,7 +8,11 @@ export const CardDados = styled.div`
     border-radius: 5px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
-
+    padding: 0;
+    &:hover button {
+    opacity: 1;
+    visibility: visible;
+  }
 
     &:hover {
         transform: translateY(-5px);

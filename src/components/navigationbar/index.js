@@ -37,11 +37,11 @@ function NavigationBar() {
   }
 
   function RotaJogos(route) {
-        navigate('/p', { state: { user: user }})
+        navigate('/jogos', { state: { user: user }})
   }
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" style={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)' }}>
       <Container fluid>
         <Botao onClick={handleShow} className="me-2">
           ☰

@@ -6,7 +6,18 @@ import {  Title,
 export default function DataTable(props) {
   return (
     <>
-      <Title>{props.title}</Title>
+      <table style={{ width: '100%' }}>
+        <td>
+          <Title>{props.title}</Title>
+        </td>
+        <td style={{ textAlign: 'right' }}>
+          <Acao className="me-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" className="bi bi-pencil-fill" viewBox="0 0 16 16">
+              <path d="M12.854.146a.5.5 0 0 1 .638.057l2.305 2.305a.5.5 0 0 1-.057.638l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 3 10.707V13h2.293L13.5 4.793 11.207 2.5z"/>
+            </svg>
+          </Acao>
+      </td>
+      </table>
       <hr/>
       <Table striped hover>
         <thead>

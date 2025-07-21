@@ -26,7 +26,7 @@ export const CardList = styled.div`
 export const PlayerCard = styled.div`
   flex: 0 0 auto;
   width: 100px;
-  height: 165px;
+  height: 175px;
   border: 1px solid black;
   text-align: center;
   background-color: white;
@@ -36,10 +36,16 @@ export const PlayerCard = styled.div`
   transition: all 0.4s ease;
 
 
+
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+
+    &:hover button {
+    opacity: 1;
+    visibility: visible;
+  }
 
   .icon {
     font-size: 40px;
@@ -81,3 +87,36 @@ export const ButtonScroll = styled.button`
     background: #750500;
   }
 `;
+
+export const DivAcao = styled.div`
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 8px;
+    position: relative;
+    
+`;
+
+export const Acao = styled.button`
+    background-color: #970700;
+    width: 26px;
+    height: 26px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover {
+        background-color: #750500;
+    }
+    svg {
+        width: ${({ size }) => size || '16px'};
+        height: ${({ size }) => size || '16px'};    
+    }
+`

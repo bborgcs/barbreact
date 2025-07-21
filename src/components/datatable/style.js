@@ -11,4 +11,8 @@ export const Acao = styled.button`
     padding: 5px 10px;
     border: none;
     border-radius: 5px; 
+
+    &:hover {
+        background-color: #750500;
+    }
 `
