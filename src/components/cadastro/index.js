@@ -9,6 +9,8 @@ import {
     DataBox,
     Title,
     InputEmail,
+    InputCPF,
+    InputName,
     InputPassword,
     Submit,
     SendBox,
@@ -20,6 +22,8 @@ export default function LoginUsuario() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
+    const [cpf, setCpf] = useState('')
     const navigate = useNavigate();
 
     function Authenticate() {
@@ -41,13 +45,29 @@ export default function LoginUsuario() {
             </BoxIcon>
 
             <DataBox>
-                <Title>LOGIN</Title>
+                <Title>CADASTRO</Title>
                 <InputEmail 
                     id="email" 
                     name="email" 
                     placeholder="E-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                />
+
+                <InputName
+                    id="name" 
+                    name="name" 
+                    placeholder="Nome"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+
+                <InputCPF 
+                    id="cpf" 
+                    name="cpf" 
+                    placeholder="CPF"
+                    value={cpf}
+                    onChange={(e) => setCpf(e.target.value)}
                 />
 
                 <InputPassword 

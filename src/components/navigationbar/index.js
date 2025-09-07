@@ -80,10 +80,20 @@ function NavigationBar() {
           >
             <Title>RIO BRANCO SPORT CLUB</Title>
           </Nav>
-          <NavDropdown title={<DropTitle text={user.name} />} id="navbarScrollingDropdown" className="me-4">
-              <NavDropdown.Item href="#" className="me-5">{user.email}</NavDropdown.Item>
-              <NavDropdown.Item href="/" className="me-5">Sair</NavDropdown.Item>
-          </NavDropdown>
+            <NavDropdown
+              title={<DropTitle text={user?.name || "Convidado"} />}
+              id="navbarScrollingDropdown"
+              className="me-4"
+            >
+              {user ? (
+                <>
+                  <NavDropdown.Item href="#" className="me-5">{user.email}</NavDropdown.Item>
+                  <NavDropdown.Item href="/" className="me-5">Sair</NavDropdown.Item>
+                </>
+              ) : (
+                <NavDropdown.Item href="/" className="me-5">Entrar</NavDropdown.Item>
+              )}
+            </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>

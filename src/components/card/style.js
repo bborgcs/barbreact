@@ -124,8 +124,8 @@ export const Acao = styled.button`
 
 export const AcaoInsert = styled.button`
     background-color: #970700;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: white;
     border: none;
     border-radius: 5px;
