@@ -29,18 +29,24 @@ export default function Create() {
     const [show, setShow] = useState(false);
     
     function sendData() {
+    const time = { 
+        name: nome, 
+        points: Number(pontos), 
+        goalDifference: Number(saldo), 
+        matchesPlayed: Number(jogos) 
+    };
 
-        const time = { name: nome, points: Number(pontos), goalDifference: Number(saldo), matchesPlayed: Number(jogos) };
-
-        Team.post('/', time).then(response => {
+    Team.createTeam(time)
+        .then(response => {
             console.log(response.data);
+            setShow(true); // mostra modal de sucesso
         })
         .catch(error => {
-            console.error(error);
+            console.error(error.response?.data?.message || error.message);
+            alert("Erro ao inserir time: " + (error.response?.data?.message || error.message));
         });
+}
 
-        setShow(true);
-    }
 
     const handleClose = () => {
     setShow(false);
@@ -99,7 +105,7 @@ export default function Create() {
                 backdrop="static"
                 keyboard={false}
             >
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>Inserção - Time</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Time inserido com sucesso!</Modal.Body>

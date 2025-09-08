@@ -23,24 +23,33 @@ export default function Edit() {
     const location = useLocation();
     const team = location.state?.team;
 
-    const [nome, setNome] = useState('')
-    const [pontos, setPontos] = useState('')
-    const [saldo, setSaldo] = useState('')
-    const [jogos, setJogos] = useState('')
+    const [nome, setNome] = useState(team?.name || '');
+    const [pontos, setPontos] = useState(team?.points || '');
+    const [saldo, setSaldo] = useState(team?.goalDifference || '');
+    const [jogos, setJogos] = useState(team?.matchesPlayed || '');
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
     function updateTime() {
+    const upTime = { 
+        name: nome, 
+        points: Number(pontos), 
+        goalDifference: Number(saldo), 
+        matchesPlayed: Number(jogos) 
+    };
 
-        const upTime = { name: nome, points: pontos, goalDifference: saldo, matchesPlayed: jogos };
-        
-        Team.put("/" + team.id, upTime).then(response => {
+    console.log("Dados enviados:", upTime);
+
+    Team.updateTeam(team.id, upTime)
+        .then(response => {
+            console.log("Resposta backend:", response.data);
             setShow(true);
         })
         .catch(error => {
-            console.error(error);
+            console.error("Erro no updateTeam:", error.response?.data || error);
         });
-    }
+}
+
 
     const handleClose = () => {
         setShow(false)
@@ -99,7 +108,7 @@ export default function Edit() {
                 backdrop="static"
                 keyboard={false}
             >
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>Atualização - Time</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Time Atualizado com Sucesso!!</Modal.Body>
